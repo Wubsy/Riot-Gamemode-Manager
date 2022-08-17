@@ -685,7 +685,7 @@ void DoMapVote(const char[] s_MapGamemode)
 		GetArrayString(h_Maps, i_ChosenMap, s_Map, sizeof(s_Map));
 		ExplodeString(s_Map, "|", s_SelectedMap, sizeof(s_SelectedMap), sizeof(s_SelectedMap[]));
 		Format(s_MapFilter, sizeof(s_MapFilter), "|%s|", s_SelectedMap[1]);
-		if(StrContains(s_ValidMaps, s_MapFilter) != -1 || !StrEqual(s_MapGamemode, s_SelectedMap[0]) || StrEqual(s_CurrentMap, s_SelectedMap[1])){
+		if(StrContains(s_ValidMaps, s_MapFilter) != -1 || !StrEqual(s_MapGamemode, s_SelectedMap[0]) || StrEqual(s_CurrentMap, s_SelectedMap[0])){
 			i--;
 		} else {
 			AddMenuItem(menu, s_Map, s_SelectedMap[1]);
