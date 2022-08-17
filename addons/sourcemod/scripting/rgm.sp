@@ -661,8 +661,8 @@ void DoMapVote(const char[] s_MapGamemode)
 	for(int i=0; i < GetArraySize(h_Maps); i++){
 		char s_Map[256];
 		char s_SelectedMap[2][256];
-		ExplodeString(s_Map, "|", s_SelectedMap, sizeof(s_SelectedMap), sizeof(s_SelectedMap[]));
 		GetArrayString(h_Maps, i, s_Map, sizeof(s_Map));
+		ExplodeString(s_Map, "|", s_SelectedMap, sizeof(s_SelectedMap), sizeof(s_SelectedMap[]));
 		if(StrEqual(s_SelectedMap[0], s_MapGamemode, false) && !StrEqual(s_Map, s_CurrentMap)){
 			i_GamemodeMapCount++
 		}
